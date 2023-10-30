@@ -1,0 +1,28 @@
+body{
+  display: flex;
+  flex-direction: column;
+
+  margin: 0%;
+  padding: 0%;
+  background-color: #003063;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-around;
+  color: #f8cc03;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+}
+header{
+  display: flex;
+  justify-content:space-between;
+  color: #f8cc03;
+  margin-right: 5vh;
+}

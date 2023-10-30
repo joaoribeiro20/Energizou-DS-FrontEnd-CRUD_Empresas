@@ -1,0 +1,63 @@
+.teste{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.divM{
+    padding: 2vh;  
+}
+.divM:hover{
+    background-color: rgba(0, 0, 0, 0.308); 
+}
+a{
+    text-decoration: none;
+    color: #f8cc03;
+   
+}
+.Titulo{
+    color: #f8cc03;
+    font-size: 60px;
+}
+.divTitulo{
+    
+    margin-top: 10vh;
+    align-items: center;
+    padding: 2vh;
+    color: white;
+    max-width: 75vh;
+}
+
+.btnMain{
+    background-color: #5e5e5e56;
+    color: #000000;
+    border-radius: 65px;
+    padding: 3vh;
+    border: 1px solid;
+}
+.btnMain:hover{
+    background-color: #b1960056;
+
+}
+.imgLogoHeader{
+    border-radius:20px;
+    width: 7vh;
+    height: 7vh;
+    padding: 1vh;
+    margin-top: 1vh;
+}
+.imgHome{
+    margin-top: 15vh;
+}
+.imgFooter{
+    width: 25vh;
+    height: 25vh;
+    border-radius: 45px;
+}
+.sectionFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
