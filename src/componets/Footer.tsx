@@ -10,14 +10,14 @@ function Footer(){
                     <article> 
                         <ul>
                              <p>Contato</p>
-                            <li><a href="">Link</a></li>
-                            <li><a href="">Link</a></li>
-                            <li><a href="">Link</a></li>
-                            <li><a href="">Link</a></li>
+                            <li><a href="">Instagram</a></li>
+                            <li><a href="">linkedin</a></li>
+                            <li><a href="">tiktok</a></li>
+                            <li><a href="">Blog</a></li>
                         </ul>
                     </article>
                 </section>
-                <h3>@Joao Ribeiro</h3>
+                <p>@Joao Ribeiro</p>
         </footer>
     )
 }

@@ -1,14 +1,21 @@
-import Footer from "../Footer"
-import Header from "../Header"
 
-function Cadastro(){
-    return(
+import Forms from "../Forms"
+import { FC } from "react"
+
+import './StyleCadastro.css'
+
+const Cadastro: FC = () => {
+    return (
         <>
-        <Header/>
-        <div>
-            <h2>Tetste</h2>
-        </div>
-        <Footer/>
+            <div className="forms">
+                <div className="imgForms">
+                    <img className="imgForms" src="./public/backgraud.jpg" alt=""  />
+                </div>
+
+                < div className="divForms">
+                    <Forms />
+                </div>
+            </div>
         </>
     )
 }

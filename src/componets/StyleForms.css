@@ -1,0 +1,9 @@
+.divFormsOFF{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1vh;
+    margin: 2vh;
+    background-color: #00306383;
+    border-radius: 45px;
+}
