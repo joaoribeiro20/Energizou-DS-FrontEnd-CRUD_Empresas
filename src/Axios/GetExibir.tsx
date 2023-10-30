@@ -18,10 +18,22 @@ const MyComponent: React.FC = () => {
   }, []);
 
   return (
-   <>
-    <Exibir mensagem={data}/>
-   </>
+    <div>
+      {/* Renderize os dados obtidos aqui */}
+      {data && (
+        <div>
+          <h1>teste</h1>
+          <p>nome: {data.nomeCliente}</p>
+          <p>nome da empresa: {data.nomeEmpresa}</p>
+        </div>
+      )}
+    </div>
   );
 };
+ /*   <>
+    <Exibir mensagem={data}/>
+   </>
+  ); */
+
 
 export default MyComponent;

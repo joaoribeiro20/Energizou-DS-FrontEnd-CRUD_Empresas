@@ -5,11 +5,12 @@ interface Props {
     mensagem: object | null;
 }
 
-const Exibir: FC<Props> = ({}) => {
+const Exibir: FC<Props> = () => {
     return (
         <>
             <div>
-                <p>{}</p>
+                <h1>testeok</h1>
+              
             </div>
         </>
     )

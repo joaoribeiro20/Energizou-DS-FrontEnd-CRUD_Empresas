@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./StyleForms.css"
-import fazerRequisicao from '../Axios/PostNovaEmpresa';
+import axios from 'axios';
 
 const Forms: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -23,12 +23,17 @@ const Forms: React.FC = () => {
     });
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    // Lide com os dados do formulário, por exemplo, envie para um servidor
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     console.log(formData);
-    fazerRequisicao(formData)
+    try {
+      const response = await axios.post('https://localhost:8088/CriarNovaEmpresa', formData);
+      console.log('Resposta do servidor:', response.data);
+    } catch (error) {
+      console.error('Erro ao enviar dados:', error);
+    }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>
