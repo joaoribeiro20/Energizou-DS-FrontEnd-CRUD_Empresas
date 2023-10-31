@@ -4,3 +4,21 @@
     flex-direction: column;
     color: rgb(255, 255, 255);
 }
+
+.containerEmpresas{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerEmpresa{
+    background-color: rgba(187, 187, 0, 0.705);
+    border-radius: 25px;
+    border: 2px solid black; 
+    padding: 2vh;
+    margin: 2vh;
+    width: 50vh;
+    color: rgb(255, 255, 255);
+}
