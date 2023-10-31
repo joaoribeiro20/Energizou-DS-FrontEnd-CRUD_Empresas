@@ -1,5 +1,6 @@
 // src/types.ts
-export interface MyData {
+export interface MyData 
+{
     
     nomeCliente: string;
     senha: number;
@@ -10,5 +11,5 @@ export interface MyData {
     numero: number;
     tefelone: string;
     email: string;
-}
+} 
   

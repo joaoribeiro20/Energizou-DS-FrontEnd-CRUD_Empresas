@@ -1,0 +1,31 @@
+#root{
+    padding: 0%;
+    margin: 0%;
+}
+.ConMain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    border-radius: 45px;
+}
+.forms{
+    align-items: center;
+    overflow-y: hidden;
+    border-radius: 45px;
+}
+.divForms{
+    background-color: #f8cb03;
+    border-radius: 0%;
+    width: 50vh;
+    height: 60vh;
+   border-top-right-radius: 45px;
+   border-bottom-right-radius: 45px;
+}
+.imgForms{
+   width: 70vh;
+   height: 60vh;
+   border-top-left-radius: 45px;
+   border-bottom-left-radius: 45px;
+   
+}
