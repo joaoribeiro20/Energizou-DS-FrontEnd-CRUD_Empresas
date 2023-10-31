@@ -1,42 +1,28 @@
+import { Link } from 'react-router-dom'
 import './Pages/homePage/Home.css'
+import { FC } from 'react'
 
-function Header(){
-    return(
+const Header: FC = () => {
+    return (
         <>
-         <header>
-        <div>
-            <img className='imgLogoHeader' src="./public/logo.jpg" alt="logo" />
-        </div>
-        <div className="teste"> 
-        <div className="divM">
-            <a href="/Cadastro">Cadastre</a>  
-            </div>
-            <div className="divM">
-            <a href="/Pesquisar">Pesquisar</a>  
-            </div>
-            <div className="divM">
-                <a href="/Editar">Editar </a>
-            </div>
-            <div className="divM">
-                <a href="/Excluir">Excluir</a> 
-            </div>
+            <header>
+                <div>
+                    <img className='imgLogoHeader' src="./public/logo.jpg" alt="logo" />
+                </div>
+                <nav className='navBarMain'>
+                    <Link className='divM' to="/">Home</Link>
+                    <Link className='divM' to="/Cadastro">Cadastro</Link>
+                    <Link className='divM' to="/Buscar">Buscar</Link>
+                    <Link className='divM' to="/Editar">Editar</Link>
+                    <Link className='divM' to="/Excluir">Excluir</Link>
+                </nav>
+                
 
-            <div className="divM">
-            <a href="/">Home</a>  
-            </div>
-
-            <div className="divM">
-            <a href="/">login</a>  
-            </div>
-            
-            
-        </div>
-      
-    </header>
-    <hr color='#f8cc03' />
+            </header>
+            <hr color='#f8cc03' />
         </>
-       
-  
+
+
     )
 }
 

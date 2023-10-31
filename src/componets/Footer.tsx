@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import './Pages/homePage/Home.css'
 
-function Footer(){
+const Footer: FC = () => {
     return(
         <footer>
                 <section className='sectionFooter'>

@@ -1,5 +1,5 @@
 
-import Forms from "../../Forms"
+import Forms from "./Forms"
 import { FC } from "react"
 
 import './StyleCadastro.css'

@@ -1,9 +1,8 @@
-.teste{
-  
+.navBarMain{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 2vh; 
 }
 .divM{
     padding: 2vh;  

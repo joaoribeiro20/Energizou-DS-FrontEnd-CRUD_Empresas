@@ -10,14 +10,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    margin-top: 4vh;
 }
 .meuInput{
   color: #333; /* Cor do texto */
   background-color: #f0f0f0; /* Cor de fundo */ 
   border: 0px;
-  border-left: blue solid; /* Largura e cor da borda */
+  border-left: rgb(2, 2, 146) solid; /* Largura e cor da borda */
   width: 150px; /* Largura do campo de entrada */
-  height: 30px; /* Altura do campo de entrada */
+  height: 20px; /* Altura do campo de entrada */
   font-size: 14px; /* Tamanho do texto */
 }
 .btnSub{
@@ -32,4 +33,9 @@ border: 0px;
 width: 20vh;
 padding: 1vh;
 
+}
+.Cinput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

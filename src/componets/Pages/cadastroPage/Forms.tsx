@@ -37,6 +37,7 @@ const Forms: React.FC = () => {
 
   return (
     <div className='divFormsMain'>
+      
     <form onSubmit={handleSubmit}>
       <div className='divFormsOFF'>
         <input
@@ -51,7 +52,6 @@ const Forms: React.FC = () => {
       </div>
       {/* ============================================================= */}
       <div className='divFormsOFF'>
-
         <input
           type="text"
           id="Senha"
@@ -64,7 +64,6 @@ const Forms: React.FC = () => {
       </div>
       {/* ============================================================ */}
       <div className='divFormsOFF'>
-     
         <input
           type="text"
           id="nomeEmpresa"
@@ -77,7 +76,6 @@ const Forms: React.FC = () => {
       </div>
       {/* ============================================================ */}
       <div className='divFormsOFF'>
-        
         <input
           type="text"
           id="cnpj"
@@ -90,7 +88,6 @@ const Forms: React.FC = () => {
       </div>
       {/* ============================================================ */}
       <div className='divFormsOFF'>
-       
         <input
           type="text"
           id="cep"
@@ -103,7 +100,6 @@ const Forms: React.FC = () => {
       </div>
       {/* ============================================================ */}
       <div className='divFormsOFF'>
-      
         <input
           type="text"
           id=  "endereco"
@@ -116,7 +112,6 @@ const Forms: React.FC = () => {
       </div>
       {/* ============================================================ */}
       <div className='divFormsOFF'>
-        
         <input
           type="text"
           id="numeroEndereco"
@@ -129,7 +124,6 @@ const Forms: React.FC = () => {
       </div>
       {/* ============================================================ */}
       <div className='divFormsOFF'>
-      
         <input
           type="text"
           id="telefone"
@@ -142,7 +136,6 @@ const Forms: React.FC = () => {
       </div>
       {/* ============================================================ */}
       <div className='divFormsOFF'>
-        
         <input
           type="text"
           id="email"
@@ -155,12 +148,10 @@ const Forms: React.FC = () => {
       </div>
       <div className='divFormsOFF'>
         <button className='btnSub' type="submit">Submit</button>
-       
       </div> 
       <div className='divFormsOFF'>
          <button className='btnhome'><a href="/">Home</a></button>
         </div>
-       
     </form>
     </div>
   );

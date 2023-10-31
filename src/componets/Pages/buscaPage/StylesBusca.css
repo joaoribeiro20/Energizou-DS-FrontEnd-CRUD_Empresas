@@ -1,0 +1,6 @@
+.containerMainBucar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
