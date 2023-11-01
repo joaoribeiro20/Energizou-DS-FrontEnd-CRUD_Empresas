@@ -6,10 +6,16 @@ import { useState } from 'react';
 
 import ComponetsDinamico from "./ComponetsDynamic";
 
-const DeleteCompany: FC = () =>{
+interface MyComponentProps {
+    message: string;
+  }
+
+const DeleteCompany: FC<MyComponentProps> = (props) =>{
     const [elementoVisivel, setElementoVisivel] = useState(false);
-    
+    const [inputValue, setInputValue] = useState('');
+
   const adicionarElemento = () => {
+    
     if(elementoVisivel === true){
         setElementoVisivel(false)
     }else{
@@ -18,6 +24,17 @@ const DeleteCompany: FC = () =>{
    
   };
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // Atualiza o valor de inputValue com o valor do input quando ele é alterado.
+    setInputValue(event.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert('Valor do input: ' + inputValue);
+    // O valor do input é acessado diretamente da variável inputValue.
+
+  }
 
     return(
         <>
@@ -31,10 +48,20 @@ const DeleteCompany: FC = () =>{
                 <div>
                       <h2>Areaa de exclusão de empresa</h2>
                       <h3>informe o CNPJ da empresa</h3>
+                      <div>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+            />
+            <button type="submit">Buscar</button>
+          </form>
+        </div>
                       <input type="text" />
                       <button onClick={adicionarElemento}>Exluir</button>
              
-                        {elementoVisivel && <ComponetsDinamico />}
+                        {elementoVisivel && <ComponetsDinamico message= {inputValue}/>}
                 </div>
                 <div>
                      

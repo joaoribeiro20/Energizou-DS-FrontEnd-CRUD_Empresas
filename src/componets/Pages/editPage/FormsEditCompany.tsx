@@ -220,7 +220,7 @@ const FormsEditCompany: React.FC = ()=>{
           <div className='divbtnForms'>
     
             <button className='btnSub' type="submit">Submit</button>
-            <Link className='btnFormshome' to="/">Home</Link>
+           
           </div>
         </form>
     </div>
