@@ -1,8 +1,8 @@
 
-import Forms from "./Forms"
+import Forms from "./FormsNewCompany"
 import { FC } from "react"
 
-import './StyleCadastro.css'
+import './StyleRegister.css'
 
 const Cadastro: FC = () => {
     return (
@@ -12,7 +12,6 @@ const Cadastro: FC = () => {
                   <div className="imgForms">
                     <img className="imgForms" src="./public/backgraud.jpg" alt=""  />
                 </div>
-
                 < div className="divForms">
                     <Forms />
                 </div>

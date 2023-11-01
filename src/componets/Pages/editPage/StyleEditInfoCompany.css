@@ -1,0 +1,30 @@
+.divMainEditar{
+    display: flex;
+    flex-direction:row;
+    
+    
+}
+.btnHomeEdit{
+    color: black;
+}
+.btnHomeEdit:hover{
+    color: #f8cc03;
+    border-bottom: #f8cc03 solid 1px; 
+    transition-duration: 700ms;
+}
+.divLateral{
+    align-items: center;
+    background-color: aliceblue;
+    width: 20%;
+    height: 100vh;
+}
+
+.divEditar{
+    background-color: rgb(182, 155, 0);
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+}

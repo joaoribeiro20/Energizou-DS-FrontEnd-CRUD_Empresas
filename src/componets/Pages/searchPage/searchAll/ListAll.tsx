@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { MyData } from "../../types";
+import { MyData } from "../../../Interfaces/typesCompany";
 
-import "./StylesBusca.css"
-import ExibirPorCNPJ from "./ExibirPorCNPJ";
+import "../StylesSearch.css"
+import ExibirPorCNPJ from "../searchCNPJ/FilterCNPJ";
+import Footer from "../../../GenericComponents/Footer";
+import Header from "../../../GenericComponents/Header";
 
 const GetExibir: React.FC = () => {
   const [data, setData] = useState<[MyData] | null>(null);
@@ -55,9 +57,12 @@ const GetExibir: React.FC = () => {
   ));
   return (
     <>
+    <Header />
       <ExibirPorCNPJ />
       <h2 className="containerMainBucar">lista de empresas cadastradas</h2>
       {itensRenderizados}
+
+      <Footer />    
     </>
   );
 };

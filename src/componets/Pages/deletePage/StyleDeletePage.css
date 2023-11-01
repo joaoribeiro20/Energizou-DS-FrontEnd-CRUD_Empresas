@@ -1,21 +1,30 @@
 .divMainEditar{
+    text-align: center;
     display: flex;
     flex-direction:row;
     
-    
 }
+.btnMenuExcluir{
+color: black;
+}
+.btnMenuExcluir:hover{
+    color: #f8cc03;
+border-bottom: #f8cc03 solid 1px; 
+transition-duration: 700ms;
+    }
+
 .divLateral{
     align-items: center;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     width: 20%;
     height: 100vh;
 }
 
 .divEditar{
-    background-color: rgb(182, 155, 0);
+    background-color: #fdfd96;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     width: 80%;
     height: 100vh;

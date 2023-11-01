@@ -1,0 +1,80 @@
+.navBarMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh;
+}
+
+.divM {
+    padding: 2vh;
+    
+}
+
+.divM:hover { 
+    color: #f8cc03;
+    border-bottom: #f8cc03 solid 1px; 
+    transition-duration: 700ms;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.Titulo {
+    color: #f8cc03;
+    font-size: 60px;
+}
+
+.divTitulo {
+
+    margin-top: 10vh;
+    align-items: center;
+    padding: 2vh;
+    color: white;
+    max-width: 75vh;
+}
+
+.btnMain {
+    color: #003063;
+    background-color: rgb(255, 255, 255);
+    border-radius: 65px;
+    padding: 3vh;
+    transition-duration: 700ms;
+    box-shadow: 17px 21px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 17px 21px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 17px 21px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btnMain:hover {
+    transition-duration: 700ms;
+    background-color: #f8cc03;
+    color: #000000;
+
+}
+
+
+
+.imgLogoHeader {
+    border-radius: 20px;
+    width: 7vh;
+    height: 7vh;
+    padding: 1vh;
+    margin-top: 1vh;
+}
+
+.imgHome {
+    margin-top: 15vh;
+}
+
+.imgFooter {
+    width: 25vh;
+    height: 25vh;
+    border-radius: 45px;
+}
+
+.sectionFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

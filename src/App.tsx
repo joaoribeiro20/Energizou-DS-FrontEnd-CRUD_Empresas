@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './componets/Pages/homePage/Home.js'
-import Cadastro from './componets/Pages/cadastroPage/Cadastro.js';
+import ListAll from './componets/Pages/searchPage/searchAll/ListAll.js'
+import EditInfoCompany from './componets/Pages/editPage/EditInfoCompany.js'
+import DeleteCompany from './componets/Pages/deletePage/DeleteCompany.js'
+import PageRegister from './componets/Pages/registerNewCompanyPage/PageRegister.js'
 
-import GetExibir from './componets/Pages/buscaPage/GetExibir.js';
-import EditarInfoEmpresa from './componets/Pages/editarPage/EditarInfoEmpresa.js';
-import ExcluirEmpresa from './componets/Pages/excluirPage/ExcluirEmpresa.js';
 /* import ErrorPage from './componets/errorPage.js'; */
 
 
@@ -15,10 +15,10 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/Cadastro' element={<Cadastro />}/>
-          <Route path='/Buscar' element={<GetExibir />}/>
-          <Route path='/Editar' element={<EditarInfoEmpresa />}/>
-          <Route path='/Excluir' element={<ExcluirEmpresa />}/>
+          <Route path='/Cadastro' element={<PageRegister />}/>
+          <Route path='/Buscar' element={<ListAll />}/>
+          <Route path='/Editar' element={<EditInfoCompany />}/>
+          <Route path='/Excluir' element={<DeleteCompany />}/>
           {/* <Route errorElement={<ErrorPage />}/> */}
         </Routes>
       </Router>

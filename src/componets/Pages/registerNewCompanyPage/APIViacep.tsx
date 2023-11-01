@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { MyData } from './typesCep.ts'; // Importe o tipo definido
+import { MyData } from '../../Interfaces/typesCep.ts'; // Importe o tipo definido
 /* import Exibir from '../componets/Pages/buscaPage/Exibir.tsx'; */
 
 const MyComponent: React.FC = () => {

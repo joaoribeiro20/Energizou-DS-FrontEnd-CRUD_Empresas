@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import './Pages/homePage/Home.css'
+import '../Pages/homePage/StyleHome.css'
 
 const Footer: FC = () => {
     return(

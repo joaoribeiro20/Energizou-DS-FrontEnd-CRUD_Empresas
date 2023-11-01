@@ -1,0 +1,12 @@
+.novo-elemento{
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 131);
+    width: 400px;
+    height: 200px;
+    z-index: 2;
+    text-align: center;
+   
+}

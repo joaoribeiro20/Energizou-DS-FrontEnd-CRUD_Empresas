@@ -1,0 +1,73 @@
+.containerPerson{
+    padding: 1vh;
+    align-items: center;
+}
+.containerCompany{
+    padding: 1vh;
+}
+.containerDataFromlocation{
+    padding: 1vh;
+}
+.divMainForms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.meuInput{
+  color: #333; /* Cor do texto */
+  background-color: #f0f0f0; /* Cor de fundo */ 
+  border: 0px;
+  border-left: #003063 solid; /* Largura e cor da borda */
+  width: 150px; /* Largura do campo de entrada */
+  height: 20px; /* Altura do campo de entrada */
+  font-size: 14px; /* Tamanho do texto */
+  padding: 1vh;
+  margin: 1vh;
+}
+.divbtnForms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.btnSub{
+border-radius: 45px;
+border: 0px;
+width: 30vh;
+padding: 2vh;
+margin: 1vh;
+color: #ffffff;
+background-color: #003063;
+cursor: pointer;
+}
+.btnFormshome{
+    text-align: center;
+border-radius: 45px;
+border: 0px;
+width: 20vh;
+padding: 1vh;
+margin: 1vh;
+color: #ffffff;
+background-color: #003063;
+}
+
+.btnhome{
+    border-radius: 45px;
+border: 0px;
+width: 20vh;
+padding: 1vh;
+
+}
+.Cinput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
