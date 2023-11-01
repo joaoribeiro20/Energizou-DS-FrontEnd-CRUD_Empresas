@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { MyData } from '../../types.ts'; // Importe o tipo definido
 
@@ -22,7 +22,7 @@ const ExibirPorCNPJ: React.FC = () => {
     // O valor do input é acessado diretamente da variável inputValue.
    
       // Faça uma solicitação Axios no useEffect para buscar os dados
-      axios.get<MyData>(`https://jsonplaceholder.typicode.com/todos/${inputValue}`)
+      axios.get<MyData>(`http://localhost:8088/Searchcpnj/${inputValue}`)
         .then(response => {
           console.log(response.data)
           setData(response.data); // Aqui você recebe os dados tipados
@@ -55,18 +55,18 @@ const ExibirPorCNPJ: React.FC = () => {
              <div className='containerEmpresas'>
              <div className='containerEmpresa'>
                <ul>
-               <li>nome: {data.title}</li>
+               {/* <li>nome: {data.title}</li>
                  <li>nome da empresa: {data.id}</li>
                  <li>telefone: {data.userId}</li>
-                 <li>Email: {data.completed}</li>
-                 {/* <h1>Empresas</h1>
-                 <li>nome: {data[0].nomeCliente}</li>
-                 <li>nome da empresa: {data[0].nomeEmpresa}</li>
-                 <li>telefone: {data[0].tefelone}</li>
-                 <li>Email: {data[0].email}</li>
-                 <li>CEP: {data[0].cep}</li>
-                 <li>Endereço: {data[0].endereco}  n{data[0].numero} </li>
-                 <li>CNPJ: {data[0].cnpj}</li> */}
+                 <li>Email: {data.completed}</li> */}
+                 <h1>Empresas</h1>
+                 <li>nome: {data.nomeCliente}</li>
+                 <li>nome da empresa: {data.nomeEmpresa}</li>
+                 <li>telefone: {data.tefelone}</li>
+                 <li>Email: {data.email}</li>
+                 <li>CEP: {data.cep}</li>
+                 <li>Endereço: {data.endereco}  n{data.numero} </li>
+                 <li>CNPJ: {data.cnpj}</li>
                </ul>
              </div>
              </div>

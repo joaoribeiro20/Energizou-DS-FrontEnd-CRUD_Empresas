@@ -5,12 +5,12 @@ import axios from 'axios';
 const Forms: React.FC = () => {
   const [formData, setFormData] = useState({
     nomeCliente: '',
-    Senha: '',
+    senha: '',
     nomeEmpresa: '',
     cnpj:'',
     cep:'',
     endereco:'',
-    numeroEndereco:'',
+    numero:'',
     telefone:'',
     email:'',
   });
@@ -27,7 +27,7 @@ const Forms: React.FC = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const response = await axios.post('https://localhost:8088/CriarNovaEmpresa', formData);
+      const response = await axios.post('//localhost:8088/CreateNewEmpresa', formData);
       console.log('Resposta do servidor:', response.data);
     } catch (error) {
       console.error('Erro ao enviar dados:', error);
@@ -54,9 +54,9 @@ const Forms: React.FC = () => {
       <div className='divFormsOFF'>
         <input
           type="text"
-          id="Senha"
-          name="Senha"
-          value={formData.Senha}
+          id="senha"
+          name="senha"
+          value={formData.senha}
           onChange={handleChange}
           placeholder='Senha'
           className='meuInput'
@@ -114,9 +114,9 @@ const Forms: React.FC = () => {
       <div className='divFormsOFF'>
         <input
           type="text"
-          id="numeroEndereco"
-          name="numeroEndereco"
-          value={formData.numeroEndereco}
+          id="numero"
+          name="numero"
+          value={formData.numero}
           onChange={handleChange}
           placeholder='Numero'
           className='meuInput'
