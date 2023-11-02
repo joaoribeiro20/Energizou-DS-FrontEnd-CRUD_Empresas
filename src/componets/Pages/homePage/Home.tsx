@@ -16,7 +16,7 @@ const Home: FC = () => {
                     error dolorem consequatur harum cum, neque deserunt quos tempora nemo 
                     tempore at. Architecto, cupiditate dignissimos.</p><br />
                  
-                <Link className='btnMain' to="/">Cadastre sua empresa aqui!!</Link>
+                <Link className='btnMain' to="/Cadastro">Cadastre sua empresa aqui!!</Link>
             </section>
             <section>
              <img src="./public/imginfo.png" alt="imagem logo energizou" className='imgHome' width={400} /> 

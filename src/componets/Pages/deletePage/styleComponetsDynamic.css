@@ -1,9 +1,9 @@
 .novo-elemento{
     position: fixed;
-    top: 50%;
+    top: 70%;
     left: 60%;
     transform: translate(-50%, -50%);
-    background-color: rgb(0, 0, 131);
+   color: #000000;
     width: 400px;
     height: 200px;
     z-index: 2;

@@ -1,55 +1,64 @@
 import { FC, useState } from "react";
 import './styleComponetsDynamic.css'
 import axios from "axios";
+import { MyData } from "../../Interfaces/typesCompany";
 
-interface MyComponentProps {
-  message: string;
-}
 
-const ComponetsDinamico: FC<MyComponentProps> = (props)  => {
+const ComponetsDinamico: FC<MyData> = (props) => {
   const [elementoVisivel, setElementoVisivel] = useState(true); // Começa visível
- 
-  
-
+  /* const [Visivel, setVisivel] = useState(); // Começa visível
+  */
 
   const handleSubmit = () => {
-    
-    alert('Valor do input: ' + props.message);
-    // O valor do input é acessado diretamente da variável inputValue.
-
-    // Faça uma solicitação Axios no useEffect para buscar os dados
-    axios.delete(`http://localhost:8088/Searchcpnj/${props.message}`)
+    axios.delete(`http://localhost:8088/DeleteCompany/${props.cnpj.replace(/\D/g, '')}`)
       .then(response => {
-        console.log(response.data)
-         // Aqui você recebe os dados tipados
-
+        response.status
+        setElementoVisivel(false)
+    /*     props.cep=''
+        props.cnpj=''
+        props.email=''
+        props.endereco=''
+        props.nomeCliente=''
+        props.nomeEmpresa=''
+        props.numero=''
+        props.telefone='' */
       })
-      
       .catch(error => {
-        // Lide com erros aqui
         console.log(error)
       });
-      
-  }
-
-  const adicionarElemento = () => {
-    setElementoVisivel(false); // Define como falso ao clicar em "Voltar"
+      setElementoVisivel(false)
   }
 
   return (
 
     <>
+
+
       {elementoVisivel ? (
-    <div className="novo-elemento">
-     <h3>Deseja Realmente Excluir permanetemente os dados da empresa com CNJH {} ?</h3>
-     <button onClick={adicionarElemento}>Voltar</button>
-    {/*  {elementoVisivel && <DeleteCompany message={'true'} />} */}
-     <button onClick={handleSubmit} >Sim, Quero excluir</button>
-    </div>
-    ) : null}
+
+        <div>
+          <h2>Empresas {props.nomeEmpresa}</h2>
+          <p>nome: {props.nomeCliente}</p>
+          <p>telefone: {props.telefone}</p>
+          <p>Email: {props.email}</p>
+          <p>CEP: {props.cep}</p>
+          <p>Endereço: {props.endereco}  n{props.numero} </p>
+          <p>CNPJ: {props.cnpj}</p>
+          <div className="novo-elemento">
+            <h3>Deseja Realmente Excluir permanetemente os dados da empresa com CNJH { } ?</h3>
+            <button onClick={handleSubmit} >Sim, Quero excluir</button>
+            <button onClick={} >Cancelar</button>
+          </div>
+        </div>
+      ) :
+        <h2>empresa excluida com sucesso</h2>
+      }
+
+
+
     </>
 
-    
+
   );
 };
 

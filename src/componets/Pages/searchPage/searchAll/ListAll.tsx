@@ -25,31 +25,17 @@ const GetExibir: React.FC = () => {
       });
   }, []);
 
-  /* 
-      const itensRenderizados = data?.map((data1, index) => (
-          <div className='containerEmpresas' key={index}>
-              <div className='containerEmpresa' >
-            <p>nome da empresa: {data1.title}</p>
-            <p>nome: {data1.userId}</p>
-            <p>telefone: {data1.id}</p>
-            <p>Email: {data1.completed}</p>
-          </div>
-              </div>
-          
-        )); */
-
-
   const itensRenderizados = data?.map((data1, index) => (
     <div className='containerEmpresas' key={index}>
       <div className='containerEmpresa' >
         <ul>
           <li>nome: {data1.nomeCliente}</li>
           <li>nome da empresa: {data1.nomeEmpresa}</li>
-          <li>telefone: {data1.tefelone}</li>
+          <li>telefone: {data1.telefone}</li>
           <li>Email: {data1.email}</li>
           <li>CEP: {data1.cep}</li>
           <li>Endereço: {data1.endereco}  n{data1.numero} </li>
-          <li>CNPJ: {data1.cnpj}</li>
+          <li>CNPJ: {data1.cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5')}</li>
         </ul>
       </div>
     </div>

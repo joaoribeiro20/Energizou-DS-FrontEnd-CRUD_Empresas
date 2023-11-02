@@ -4,7 +4,7 @@ import { MyData } from '../../../Interfaces/typesCompany.ts'; // Importe o tipo 
 
 import '../StylesSearch.css'
 
-
+import {cnpjMask} from '../../../masks.ts'
 
 const ExibirPorCNPJ: React.FC = () => {
   const [data, setData] = useState<MyData | null>(null);
@@ -12,28 +12,31 @@ const ExibirPorCNPJ: React.FC = () => {
 
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // Atualiza o valor de inputValue com o valor do input quando ele é alterado.
-    setInputValue(event.target.value);
+  setInputValue(cnpjMask(event.target.value))
   };
 
+ 
+ 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Valor do input: ' + inputValue);
+
     // O valor do input é acessado diretamente da variável inputValue.
 
     // Faça uma solicitação Axios no useEffect para buscar os dados
-    axios.get<MyData>(`http://localhost:8088/Searchcpnj/${inputValue}`)
+    axios.get<MyData>(`http://localhost:8088/Searchcpnj/${ inputValue.replace(/\D/g, '')}`)
       .then(response => {
         console.log(response.data)
-        setData(response.data); // Aqui você recebe os dados tipados
+        response.data ? 
+        setData(response.data) : 
+        alert('empresa nao encontrada'), setData(response.data)
 
       })
-      
+
       .catch(error => {
         // Lide com erros aqui
         console.log(error)
       });
-      setInputValue('');
+    setInputValue('');
   }
 
 
@@ -46,6 +49,7 @@ const ExibirPorCNPJ: React.FC = () => {
           <form onSubmit={handleSubmit}>
             <input
               type="text"
+              maxLength={18}
               value={inputValue}
               onChange={handleInputChange}
             />
@@ -57,7 +61,7 @@ const ExibirPorCNPJ: React.FC = () => {
 
 
 
-      {data && (
+      {data ? (
         <div className='containerEmpresas'>
           <div className='containerEmpresa'>
             <ul>
@@ -68,16 +72,18 @@ const ExibirPorCNPJ: React.FC = () => {
               <h1>Empresas</h1>
               <li>nome: {data.nomeCliente}</li>
               <li>nome da empresa: {data.nomeEmpresa}</li>
-              <li>telefone: {data.tefelone}</li>
+              <li>telefone: {data.telefone}</li>
               <li>Email: {data.email}</li>
               <li>CEP: {data.cep}</li>
               <li>Endereço: {data.endereco}  n{data.numero} </li>
-              <li>CNPJ: {data.cnpj}</li>
+              <li>CNPJ: {data.cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5')}</li>
             </ul>
           </div>
         </div>
-
-      )}
+      ) : 
+      <div className='containerFilterCNPJ'>
+        <h3>Nenhuma empresa encontrada</h3>
+        </div> }
     </>
   );
 };

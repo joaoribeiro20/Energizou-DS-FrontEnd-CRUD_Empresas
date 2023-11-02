@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./StyleForms.css"
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import {cnpjMask, phoneMask, isEmailValid, cepMask} from '../../masks'
 
 const Forms: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -42,61 +43,29 @@ const Forms: React.FC = () => {
       [name]: formattedValue,
     }));
     
-   
   };
 
 
-    const phoneMask = (value:string) => {
-      if (!value) return "";
-    
-      value = value.replace(/\D/g, ''); // Remove caracteres não numéricos
-      value = value.replace(/(\d{2})(\d{4,5})(\d{4})/, '($1) $2-$3'); // Aplica a máscara (XX) XXXXX-XXXX
-      return value;
-    };
-
-     const isEmailValid = (email:string) => {
-      const regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
-      if(regex.test(email)){
-        return email
-      }else{
-        return null
-      }
-    }; 
-
-    const cepMask = (value:string) => {
-      if (!value) return "";
-    
-      value = value.replace(/\D/g, ''); // Remove caracteres não numéricos
-      value = value.replace(/(\d{5})(\d{3})/, '$1-$2'); // Aplica a máscara XXXXX-XXX
-    
-      return value;
-    };
-
-    const cnpjMask = (value:string) => {
-      if (!value) return "";
-    
-      value = value.replace(/\D/g, ''); // Remove caracteres não numéricos
-      value = value.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5'); // Aplica a máscara XX.XXX.XXX/XXXX-XX
-    
-      return value;
-    };
+   
    
 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    
     if(formData.email === null){
       alert('email invalido')
     }
+    
+    console.log(formData);
     try {
-      const response = await axios.post('//localhost:8088/CreateNewEmpresa', formData);
+
+      const response = await axios.post('//localhost:8088/NewCompany', formData);
       console.log('Resposta do servidor:', response.data);
     } catch (error) {
-      console.error('Erro ao enviar dados:', error);
-    }
-  };
-
+     alert(error.response.data)
+  }
+  }
 
   return (
 

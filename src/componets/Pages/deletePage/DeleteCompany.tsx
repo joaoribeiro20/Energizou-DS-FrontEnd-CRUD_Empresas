@@ -1,78 +1,91 @@
-import { FC } from "react";
-import { Link } from "react-router-dom";
+import { FC, useState } from "react";
+
 
 import './StyleDeletePage.css'
-import { useState } from 'react';
-
 import ComponetsDinamico from "./ComponetsDynamic";
 
-interface MyComponentProps {
-    message: string;
-  }
+import { MyData } from "../../Interfaces/typesCompany";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { cnpjMask } from "../../masks";
 
-const DeleteCompany: FC<MyComponentProps> = (props) =>{
-    const [elementoVisivel, setElementoVisivel] = useState(false);
-    const [inputValue, setInputValue] = useState('');
-
-  const adicionarElemento = () => {
-    
-    if(elementoVisivel === true){
-        setElementoVisivel(false)
-    }else{
-         setElementoVisivel(true);
-    }
-   
-  };
+const DeleteCompany: FC = () => {
+  const [data, setData] = useState<MyData | null>(null);
+  const [inputValue, setInputValue] = useState('');
+ /*  const [valueProps, setValueProps] = useState('');
+ */
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // Atualiza o valor de inputValue com o valor do input quando ele é alterado.
-    setInputValue(event.target.value);
+    setInputValue(cnpjMask(event.target.value));
   };
 
+
+ 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Valor do input: ' + inputValue);
-    // O valor do input é acessado diretamente da variável inputValue.
 
+   
+    // O valor do input é acessado diretamente da variável inputValue.
+ 
+ 
+    // Faça uma solicitação Axios no useEffect para buscar os dados
+    axios.get<MyData>(`http://localhost:8088/Searchcpnj/${inputValue.replace(/\D/g, '')}`)
+      .then(response => {
+        console.log(response.data )
+        response.data ? 
+        setData(response.data) : setData(null)
+      })
+      .catch(error => {
+        // Lide com erros aqui
+        console.log(error)
+      });
+      
   }
 
-    return(
-        <>
-        <div className="divMainEditar">
-            <div className="divLateral">
-                <h3>Menu</h3>
-                <Link className='btnMenuExcluir' to="/">Home</Link>
-            </div>
+  return (
+    <>
+      <div className="divMainEditar">
 
-            <div className="divEditar">
-                <div>
-                      <h2>Areaa de exclusão de empresa</h2>
-                      <h3>informe o CNPJ da empresa</h3>
-                      <div>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={inputValue}
-              onChange={handleInputChange}
-            />
-            <button type="submit">Buscar</button>
-          </form>
+        <div className="divLateral">
+          <h3>Menu</h3>
+          <Link className='btnMenuExcluir' to="/">Home</Link>
         </div>
-                      <input type="text" />
-                      <button onClick={adicionarElemento}>Exluir</button>
-             
-                        {elementoVisivel && <ComponetsDinamico message= {inputValue}/>}
-                </div>
-                <div>
-                     
-                </div>
-              
+        <div className="divEditar">
+          <div>
+            <h2>Areaa de exclusão de empresa</h2>
+            <h3>informe o CNPJ da empresa</h3>
+            <div>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  maxLength={18}
+                  value={inputValue}
+                  onChange={handleInputChange}
+                />
+                <button type="submit">Buscar</button>
+              </form>
             </div>
-         
-       </div>  
-        </>
-        
-    )
+            {data ? (
+                <ComponetsDinamico
+                 nomeCliente={data.nomeCliente} 
+                 nomeEmpresa={data.nomeEmpresa} 
+                 numero={data.nomeEmpresa}
+                 cep={data.cep}
+                 cnpj={data.cnpj}
+                 endereco={data.endereco}
+                 email={data.email} 
+                 senha={data.senha}
+                 telefone={data.telefone}
+                 />
+            ) : <div><h3>Nenhuma empresa encontrada</h3> </div>}
+
+          </div>
+        </div>
+      </div>
+    </>
+
+  )
 }
 
 export default DeleteCompany
