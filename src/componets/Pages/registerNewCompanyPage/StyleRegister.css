@@ -17,15 +17,36 @@
 .divForms{
     background-color: #f8cb03;
     border-radius: 0%;
-    width:  60vh;
-    height: 75vh;
+    width:  55vh;
+    height: 65vh;
    border-top-right-radius: 45px;
    border-bottom-right-radius: 45px;
+
 }
 .imgForms{
-   width: 75vh;
-   height: 75vh;
+   width: 60vh;
+   height: 65vh;
    border-top-left-radius: 45px;
    border-bottom-left-radius: 45px;
    
 }
+
+
+@media (max-width: 1000px) {
+    .imgForms{
+        width: 45vh;
+        height: 55vh;
+        border-top-left-radius: 45px;
+        border-bottom-left-radius: 45px;
+        
+     }
+     .divForms{
+        background-color: #f8cb03;
+        border-radius: 0%;
+        width: 45vh;
+        height: 55vh;
+       border-top-right-radius: 45px;
+       border-bottom-right-radius: 45px;
+    }
+     
+    }

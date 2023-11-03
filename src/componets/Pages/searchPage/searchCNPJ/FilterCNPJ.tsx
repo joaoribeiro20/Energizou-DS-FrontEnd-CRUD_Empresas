@@ -4,7 +4,8 @@ import { MyData } from '../../../Interfaces/typesCompany.ts'; // Importe o tipo 
 
 import '../StylesSearch.css'
 
-import {cnpjMask} from '../../../masks.ts'
+import {cepMask, cnpjMask} from '../../../masks.ts'
+import { Link } from 'react-router-dom';
 
 const ExibirPorCNPJ: React.FC = () => {
   const [data, setData] = useState<MyData | null>(null);
@@ -62,24 +63,31 @@ const ExibirPorCNPJ: React.FC = () => {
 
 
       {data ? (
-        <div className='containerEmpresas'>
+      
+      <div className='teste'>
           <div className='containerEmpresa'>
-            <ul>
-              {/* <li>nome: {data.title}</li>
-                 <li>nome da empresa: {data.id}</li>
-                 <li>telefone: {data.userId}</li>
-                 <li>Email: {data.completed}</li> */}
-              <h1>Empresas</h1>
-              <li>nome: {data.nomeCliente}</li>
-              <li>nome da empresa: {data.nomeEmpresa}</li>
-              <li>telefone: {data.telefone}</li>
-              <li>Email: {data.email}</li>
-              <li>CEP: {data.cep}</li>
-              <li>Endereço: {data.endereco}  n{data.numero} </li>
-              <li>CNPJ: {data.cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5')}</li>
-            </ul>
-          </div>
-        </div>
+          <div>
+          <h3>{data.nomeEmpresa}</h3>
+          <p>Dado da empresa Cadastrada</p>
+          <span>
+            <p>Prorietario: {data.nomeCliente}
+            <br />
+            CNPJ: {cnpjMask(data.cnpj)}
+            <br />
+            Telefone: {data.telefone}
+            <br />
+            Email: {data.email}
+            <br />
+            Cep:  {cepMask(data.cep)}
+            <br />
+            Endereço:  {data.endereco}  n{data.numero} 
+            </p>
+          </span>
+        </div> <br />
+        <Link className='LinkPageE' to="/Editar">Editar</Link>
+        <Link className='LinkPageD' to="/Excluir">Excluir</Link>
+      </div>
+       </div>
       ) : 
       <div className='containerFilterCNPJ'>
         <h3>Nenhuma empresa encontrada</h3>

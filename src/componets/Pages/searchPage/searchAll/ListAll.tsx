@@ -6,6 +6,8 @@ import "../StylesSearch.css"
 import ExibirPorCNPJ from "../searchCNPJ/FilterCNPJ";
 import Footer from "../../../GenericComponents/Footer";
 import Header from "../../../GenericComponents/Header";
+import { Link } from "react-router-dom";
+import { cepMask, cnpjMask } from "../../../masks";
 
 const GetExibir: React.FC = () => {
   const [data, setData] = useState<[MyData] | null>(null);
@@ -25,18 +27,29 @@ const GetExibir: React.FC = () => {
       });
   }, []);
 
-  const itensRenderizados = data?.map((data1, index) => (
-    <div className='containerEmpresas' key={index}>
+  const itensRenderizados = data?.map((info, index) => (
+    <div key={index}>
       <div className='containerEmpresa' >
-        <ul>
-          <li>nome: {data1.nomeCliente}</li>
-          <li>nome da empresa: {data1.nomeEmpresa}</li>
-          <li>telefone: {data1.telefone}</li>
-          <li>Email: {data1.email}</li>
-          <li>CEP: {data1.cep}</li>
-          <li>Endereço: {data1.endereco}  n{data1.numero} </li>
-          <li>CNPJ: {data1.cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5')}</li>
-        </ul>
+        <div>
+          <h3>{info.nomeEmpresa}</h3>
+          <p>Dado da empresa Cadastrada</p>
+          <span>
+            <p>Prorietario: {info.nomeCliente}
+            <br />
+            CNPJ: {cnpjMask(info.cnpj)}
+            <br />
+            Telefone: {info.telefone}
+            <br />
+            Email: {info.email}
+            <br />
+            Cep:  {cepMask(info.cep)}
+            <br />
+            Endereço:  {info.endereco}  n{info.numero} 
+            </p>
+          </span>
+        </div> <br />
+        <Link className='LinkPageE' to="/Editar">Editar</Link>
+        <Link className='LinkPageD' to="/Excluir">Excluir</Link>
       </div>
     </div>
 
@@ -45,8 +58,11 @@ const GetExibir: React.FC = () => {
     <>
     <Header />
       <ExibirPorCNPJ />
-      <h2 className="containerMainBucar">lista de empresas cadastradas</h2>
-      {itensRenderizados}
+      <h2 className="containerMainBucar">Lista de empresas cadastradas</h2>
+      <div className="containerEmpresas">
+        {itensRenderizados}
+      </div>
+      
 
       <Footer />    
     </>

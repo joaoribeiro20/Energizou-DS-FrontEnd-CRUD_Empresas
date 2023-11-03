@@ -8,22 +8,59 @@
 .containerEmpresas{
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    max-height: 60vh;
+    overflow-y: auto;  
+  
+}
+::-webkit-scrollbar{
+    background-color:#A8DAE5;
+    width: 1px;
+
+}
+::-webkit-scrollbar-thumb{
+background-color: #A8DAE5;
+height: 1px;
 }
 
+.teste{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .containerEmpresa{
-    background-color: rgba(187, 187, 0, 0.705);
-    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius: 15px;
     border: 2px solid black; 
     padding: 2vh;
     margin: 2vh;
-    width: 50vh;
-    color: rgb(255, 255, 255);
+    width: 40vh;
+    color: rgb(0, 0, 0);
+    align-items: center;
+  
+    
 }
 
 .containerFilterCNPJ{
     text-align: center;
     color: rgb(255, 255, 255);
+}
+.LinkPageD, .LinkPageE{
+    color: black;
+    padding: 1vh;
+}
+.LinkPageD:hover{
+    transition: 500ms;
+    color: rgb(255, 0, 0);
+    padding: 1vh;
+    border-bottom:  rgb(255, 0, 0);
+}
+.LinkPageE:hover{
+    transition: 500ms;
+    color: rgb(0, 98, 255);
+    padding: 1vh;
+    border-bottom:  rgb(255, 0, 0);
 }

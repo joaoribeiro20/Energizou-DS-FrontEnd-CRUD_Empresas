@@ -14,8 +14,12 @@ const EditarInfoEmpresa: FC = () => {
     const [data, setData] = useState<MyData | null>(null);
 
     const buscar = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setData(null)
         setInputValue(cnpjMask(event.target.value))
     };
+
+
+    
     const SubmitCnpj = (e: React.FormEvent) => {
         e.preventDefault();
 

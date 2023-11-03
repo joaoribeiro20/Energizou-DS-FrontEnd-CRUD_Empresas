@@ -19,7 +19,7 @@ function router() {
           <Route path='/Cadastro' element={<PageRegister />}/>
           <Route path='/Buscar' element={<ListAll />}/>
           <Route path='/Editar' element={<EditInfoCompany />}/>
-          <Route path='/Excluir' element={<DeleteCompany message=''/>}/>
+          <Route path='/Excluir' element={<DeleteCompany />}/>
           {/* <Route errorElement={<ErrorPage />}/> */}
         </Routes>
       </Router>

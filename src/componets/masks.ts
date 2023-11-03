@@ -15,14 +15,7 @@ const cnpjMask = (value:string) => {
     return value;
   };
 
-   const isEmailValid = (email:string) => {
-    const regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
-    if(regex.test(email)){
-      return email
-    }else{
-      return null
-    }
-  }; 
+    
 
   const cepMask = (value:string) => {
     if (!value) return "";
@@ -32,4 +25,4 @@ const cnpjMask = (value:string) => {
   
     return value;
   };
-  export {cnpjMask, phoneMask, isEmailValid, cepMask}
+  export {cnpjMask, phoneMask, cepMask}

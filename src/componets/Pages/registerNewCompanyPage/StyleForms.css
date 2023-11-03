@@ -1,12 +1,15 @@
 .containerPerson{
     padding: 1vh;
     align-items: center;
+    text-align: center;
 }
 .containerCompany{
     padding: 1vh;
+    text-align: center;
 }
 .containerDataFromlocation{
     padding: 1vh;
+    text-align: center;
 }
 .divMainForms{
     display: flex;
@@ -14,6 +17,7 @@
     justify-content: center;
     align-items: center;
     overflow: auto;
+    margin-top: 5vh;
 }
 .meuInput{
   color: #333; /* Cor do texto */
@@ -24,7 +28,7 @@
   height: 20px; /* Altura do campo de entrada */
   font-size: 14px; /* Tamanho do texto */
   padding: 1vh;
-  margin: 1vh;
+  margin: 5px;
 }
 .divbtnForms{
     display: flex;
@@ -41,22 +45,24 @@ input[type="number"]::-webkit-outer-spin-button {
 .btnSub{
 border-radius: 45px;
 border: 0px;
-width: 30vh;
+width: 20vh;
 padding: 2vh;
 margin: 1vh;
 color: #ffffff;
 background-color: #003063;
 cursor: pointer;
+font-size:14px;
 }
 .btnFormshome{
     text-align: center;
 border-radius: 45px;
 border: 0px;
-width: 20vh;
+width: 18vh;
 padding: 1vh;
 margin: 1vh;
 color: #ffffff;
 background-color: #003063;
+
 }
 
 .btnhome{
@@ -71,3 +77,113 @@ padding: 1vh;
     flex-direction: row;
     justify-content: center;
 }
+
+@media (max-width: 1000px) {
+    .containerPerson{
+        padding: 0vh;
+        align-items: center;
+        text-align: center;
+    }
+    .containerCompany{
+        padding: 0vh;
+        text-align: center;
+    }
+    .containerDataFromlocation{
+        padding: 0vh;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .divMainForms{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        margin-top: 6vh;
+    }
+    .meuInput{
+      color: #333; /* Cor do texto */
+      background-color: #f0f0f0; /* Cor de fundo */ 
+      border: 0px;
+      border-left: #003063 solid; /* Largura e cor da borda */
+      width: 150px; /* Largura do campo de entrada */
+      height: 20px; /* Altura do campo de entrada */
+      font-size: 14px; /* Tamanho do texto */
+      padding: 0vh;
+      margin: 3px;
+    }
+    .btnSub{
+        border-radius: 45px;
+        border: 0px;
+        width: 18vh;
+        padding: 0vh;
+        margin: 1vh;
+        color: #ffffff;
+        background-color: #003063;
+        cursor: pointer;
+        }
+        .btnFormshome{
+            text-align: center;
+        border-radius: 45px;
+        border: 0px;
+        width: 18vh;
+        padding: 0vh;
+        margin: 0vh;
+        color: #ffffff;
+        background-color: #003063;
+        font-size: small;
+        }
+        
+        .btnhome{
+            border-radius: 45px;
+        border: 0px;
+        width: 20vh;
+        padding: 1vh;
+        
+        }
+  }
+
+  @media (max-width: 490px) {
+    .containerPerson{
+        padding: 0vh;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+    }
+    .containerCompany{
+        padding: 0vh;
+        text-align: center;
+        font-size: 10px;
+    }
+    .containerDataFromlocation{
+        padding: 0vh;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+    }
+    .divMainForms{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        margin-top: 6vh;
+    }
+    .meuInput{
+        color: #333; /* Cor do texto */
+        background-color: #f0f0f0; /* Cor de fundo */ 
+        border: 0px;
+        border-left: #003063 solid; /* Largura e cor da borda */
+        width: 150px; /* Largura do campo de entrada */
+        height: 15px; /* Altura do campo de entrada */
+        font-size: 14px; /* Tamanho do texto */
+        padding: 0vh;
+        margin: 3px;
+        font-size: 10px;
+      }
+
+  }
