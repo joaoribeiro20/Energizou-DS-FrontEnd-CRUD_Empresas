@@ -1,4 +1,4 @@
-![PageHome](https://github.com/joaoribeiro20/Energizou-DS-FrontEnd-CRUD_Empresas/assets/65830609/f1b108b1-7d8d-4856-84cd-863db6d9cdc4)# Front-End readme
+
 
 ## Overview
 
@@ -51,7 +51,7 @@ Nesta página, oferecemos a funcionalidade de criar uma nova empresa por meio de
 
 O formulário possui máscaras para CNPJ, CEP e telefone, bem como validações, como todos campos obrigatórios, verificação da quantidade correta de dígitos para o telefone, validação de e-mail com "@" e final ".br" ou ".com", além de outras validações, como a quantidade correta de dígitos para o CNPJ e o preenchimento automático do endereço a partir da API ViaCep.
 
-![Untitled](Front-End%20readme%204750a71f1d50456b9f7326910166f924/Untitled%201.png)
+<img src="/public/PageCadastro.png">
 
 ## Listar todas as empresas cadastradas e Consultar uma empresa específica por CNPJ
 
@@ -60,7 +60,7 @@ O formulário possui máscaras para CNPJ, CEP e telefone, bem como validações,
 
 Nesta página, exibimos uma lista fornecida pela API que contém todas as empresas cadastradas no banco de dados. Além disso, oferecemos a possibilidade de filtrar uma empresa pelo seu CNPJ.
 
-![Untitled](Front-End%20readme%204750a71f1d50456b9f7326910166f924/Untitled%202.png)
+<img src="/public/PageBucas.png">
 
 ## Atualizar os dados de uma empresa.
 
@@ -68,7 +68,7 @@ Nesta etapa, é necessário fornecer o CNPJ para localizar a empresa cujos dados
 
 - [x]  Atualizar os dados de uma empresa.
 
-![Untitled](Front-End%20readme%204750a71f1d50456b9f7326910166f924/Untitled%203.png)
+<img src="/public/PageEdit.png">
 
 ## Excluir uma empresa.
 
@@ -76,4 +76,4 @@ Nesta etapa, é necessário fornecer o CNPJ para localizar a empresa cujos dados
 
 Nesta área, oferecemos a função de excluir uma empresa, fornecendo o CNPJ da empresa desejada. Após fornecer as informações, os dados da empresa são exibidos para verificar os dados antes de prosseguir com a exclusão. Para efetuar a exclusão, é necessário responder a uma pergunta de confirmação.
 
-![Untitled](Front-End%20readme%204750a71f1d50456b9f7326910166f924/Untitled%204.png)
+<img src="/public/PageDelete.png">
