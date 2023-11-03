@@ -1,4 +1,4 @@
-# Front-End readme
+![PageHome](https://github.com/joaoribeiro20/Energizou-DS-FrontEnd-CRUD_Empresas/assets/65830609/f1b108b1-7d8d-4856-84cd-863db6d9cdc4)# Front-End readme
 
 ## Overview
 
@@ -41,7 +41,7 @@ $ npm run dev
 
 ## Home Page
 
-![Untitled](Front-End%20readme%204750a71f1d50456b9f7326910166f924/Untitled.png)
+<img src="/public/PageHome.png">
 
 ## Criar uma nova empresa
 
