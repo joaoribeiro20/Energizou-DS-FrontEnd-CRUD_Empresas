@@ -60,7 +60,7 @@ O formulário possui máscaras para CNPJ, CEP e telefone, bem como validações,
 
 Nesta página, exibimos uma lista fornecida pela API que contém todas as empresas cadastradas no banco de dados. Além disso, oferecemos a possibilidade de filtrar uma empresa pelo seu CNPJ.
 
-<img src="/public/PageBucas.png">
+<img src="/public/pageBucas.png">
 
 ## Atualizar os dados de uma empresa.
 
