@@ -1,6 +1,6 @@
 import './StyleHome.css'
-import Footer from '../../GenericComponents/Footer'
-import Header from '../../GenericComponents/Header'
+import Footer from '../../componets/Footer'
+import Header from '../../componets/Header'
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 

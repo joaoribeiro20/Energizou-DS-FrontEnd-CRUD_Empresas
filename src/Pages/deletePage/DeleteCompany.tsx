@@ -3,7 +3,8 @@ import './StyleDeletePage.css'
 import { MyData } from "../../Interfaces/typesCompany";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { cepMask, cnpjMask } from "../../masks";
+import { cepMask, cnpjMask } from "../../componets/masks";
+/* import excluir from "../../services/Delete"; */
 
 const DeleteCompany: FC = () => {
   const [data, setData] = useState<MyData | null>(null);
@@ -31,7 +32,7 @@ const DeleteCompany: FC = () => {
 
         response.data ? setData(response.data) : setData(null)
 
-          
+
         /* setInfo(true) */
       })
       .catch(error => {
@@ -40,6 +41,15 @@ const DeleteCompany: FC = () => {
       });
 
   }
+
+/*   function deletar(){
+    excluir(data?.cnpj.replace(/\D/g, '') || "")
+    setData(null)
+    setInputValue('')
+    setMensagemValue(true)
+    alert(`Empresa excluida com sucesso!!`)
+  } */
+  
   const excluir = () => {
     axios.delete(`http://localhost:8088/DeleteCompany/${data?.cnpj.replace(/\D/g, '')}`)
       .then(response => {
@@ -102,7 +112,7 @@ const DeleteCompany: FC = () => {
             ) :
               <div></div>
             }
- {mensagemBuscaValue ? (
+            {mensagemBuscaValue ? (
               <div>empresa nao encontrada</div>
             ) :
               <div> </div>

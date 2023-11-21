@@ -1,7 +1,7 @@
 import axios, { AxiosError } from "axios";
 import { useEffect, useState } from "react";
 
-import { cepMask, cnpjMask,  phoneMask } from "../../masks";
+import { cepMask, cnpjMask,  phoneMask } from  "../../componets/masks";
 import { MyData } from "../../Interfaces/typesCompany";
 
 

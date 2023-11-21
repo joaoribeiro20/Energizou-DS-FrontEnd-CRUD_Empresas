@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './StyleEditInfoCompany.css'
 import FormsEditCompany from "./FormsEditCompany";
 import { MyData } from "../../Interfaces/typesCompany";
-import { cnpjMask } from "../../masks";
+import { cnpjMask } from "../../componets/masks"
 import axios from "axios";
 
 /* import defualtEE from "../defaultEditarExcluir/defualtEE"; */

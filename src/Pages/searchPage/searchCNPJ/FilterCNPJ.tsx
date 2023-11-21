@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { MyData } from '../../../Interfaces/typesCompany.ts'; // Importe o tipo definido
 
-import '../StylesSearch.css'
+import '../StylesSearch.css';
 
-import {cepMask, cnpjMask} from '../../../masks.ts'
+import {cepMask, cnpjMask} from "../../../componets/masks.ts";
 import { Link } from 'react-router-dom';
 
 const ExibirPorCNPJ: React.FC = () => {

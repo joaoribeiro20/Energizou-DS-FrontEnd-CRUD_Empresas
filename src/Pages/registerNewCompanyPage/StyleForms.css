@@ -43,10 +43,9 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 .btnSub{
-border-radius: 45px;
+border-radius: 5px;
 border: 0px;
-width: 20vh;
-padding: 2vh;
+width: 30vh;
 margin: 1vh;
 color: #ffffff;
 background-color: #003063;
@@ -54,11 +53,9 @@ cursor: pointer;
 font-size:14px;
 }
 .btnFormshome{
-    text-align: center;
-border-radius: 45px;
-border: 0px;
-width: 18vh;
-padding: 1vh;
+text-align: center;
+border-radius: 5px;
+width: 30vh;
 margin: 1vh;
 color: #ffffff;
 background-color: #003063;
@@ -78,15 +75,17 @@ padding: 1vh;
     justify-content: center;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
     .containerPerson{
         padding: 0vh;
         align-items: center;
         text-align: center;
+        font-size: 15px;
     }
     .containerCompany{
         padding: 0vh;
         text-align: center;
+        font-size: 15px;
     }
     .containerDataFromlocation{
         padding: 0vh;
@@ -94,7 +93,10 @@ padding: 1vh;
         align-items: center;
         display: flex;
         flex-direction: column;
+        font-size: 15px;
     }
+
+    /* --------------------------------      */
     .divMainForms{
         display: flex;
         flex-direction: column;
@@ -104,45 +106,17 @@ padding: 1vh;
         margin-top: 6vh;
     }
     .meuInput{
-      color: #333; /* Cor do texto */
-      background-color: #f0f0f0; /* Cor de fundo */ 
-      border: 0px;
-      border-left: #003063 solid; /* Largura e cor da borda */
-      width: 150px; /* Largura do campo de entrada */
-      height: 20px; /* Altura do campo de entrada */
-      font-size: 14px; /* Tamanho do texto */
-      padding: 0vh;
-      margin: 3px;
-    }
-    .btnSub{
-        border-radius: 45px;
+        color: #333; /* Cor do texto */
+        background-color: #f0f0f0; /* Cor de fundo */ 
         border: 0px;
-        width: 18vh;
+        border-left: #003063 solid; /* Largura e cor da borda */
+        width: 150px; /* Largura do campo de entrada */
+        height: 15px; /* Altura do campo de entrada */
+        font-size:15px; /* Tamanho do texto */
         padding: 0vh;
-        margin: 1vh;
-        color: #ffffff;
-        background-color: #003063;
-        cursor: pointer;
-        }
-        .btnFormshome{
-            text-align: center;
-        border-radius: 45px;
-        border: 0px;
-        width: 18vh;
-        padding: 0vh;
-        margin: 0vh;
-        color: #ffffff;
-        background-color: #003063;
-        font-size: small;
-        }
-        
-        .btnhome{
-            border-radius: 45px;
-        border: 0px;
-        width: 20vh;
-        padding: 1vh;
-        
-        }
+        margin: 3px;
+     
+      }
   }
 
   @media (max-width: 490px) {

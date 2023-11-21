@@ -4,10 +4,10 @@ import { MyData } from "../../../Interfaces/typesCompany";
 
 import "../StylesSearch.css"
 import ExibirPorCNPJ from "../searchCNPJ/FilterCNPJ";
-import Footer from "../../../GenericComponents/Footer";
-import Header from "../../../GenericComponents/Header";
+import Footer from "../../../componets/Footer";
+import Header from "../../../componets/Header";
 import { Link } from "react-router-dom";
-import { cepMask, cnpjMask } from "../../../masks";
+import { cepMask, cnpjMask } from "../../../componets/masks";
 
 const GetExibir: React.FC = () => {
   const [data, setData] = useState<[MyData] | null>(null);

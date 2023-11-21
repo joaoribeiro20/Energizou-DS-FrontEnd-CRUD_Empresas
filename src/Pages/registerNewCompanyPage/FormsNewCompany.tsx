@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./StyleForms.css"
 import axios, { AxiosError } from 'axios';
 import { Link } from 'react-router-dom';
-import { cnpjMask, phoneMask, cepMask } from '../../masks'
+import { cnpjMask, phoneMask, cepMask } from '../../componets/masks.ts'
 import { MyData } from '../../Interfaces/typesCep.ts'; 
 
 const Forms: React.FC = () => {
